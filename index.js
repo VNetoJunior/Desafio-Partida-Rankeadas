@@ -2,18 +2,29 @@
 
 
 let nomeUsuario = "Junior"
+
 let vitoriasNaSemana = [14, 5, 15, 8]
+
 let derrotasNaSemana = [7, 5, 10, 4]
+
 let totalVitoriasMes = vitoriasNaSemana[0] + vitoriasNaSemana[1] + vitoriasNaSemana[2] + vitoriasNaSemana[3]
+
 let totalDerrotasMes = derrotasNaSemana[0] + derrotasNaSemana[1] + derrotasNaSemana[2] + derrotasNaSemana[3]
+
+let totalPartidasSemana = [
+    vitoriasNaSemana[0] + derrotasNaSemana[0], 
+    vitoriasNaSemana[1] + derrotasNaSemana[1], 
+    vitoriasNaSemana[2] + derrotasNaSemana[2], 
+    vitoriasNaSemana[3] + derrotasNaSemana[3]
+]
 
 
 console.log (`
     O usuário de nome ${nomeUsuario}, jogou patidas do seu jogo favorito por um mês e esses foram seus resultados: 
-    Na Primeira semana, ${nomeUsuario} jogou 21 Partidas, Vencendo ${vitoriasNaSemana[0]} e Perdendo ${derrotasNaSemana[0]}!
-    Na Segunda semana, ele não conseguiu jogar muito, pois estava ocupado, portanto, jogou 10 Partidas, Vencendo ${vitoriasNaSemana[1]} e Perdendo ${derrotasNaSemana[1]}!
-    Na Terceira semana, ${nomeUsuario} estava motivado pra pegar um bom Rank e jogou 25 Partidas, Vencendo ${vitoriasNaSemana[2]} e Perdendo ${derrotasNaSemana[2]}!
-    E por fim, em sua última semana do mês, ele jogou 12 Partidas, Venceu ${vitoriasNaSemana[3]} e Perdeu ${derrotasNaSemana[3]}!
+    Na Primeira semana, ${nomeUsuario} jogou ${totalPartidasSemana[0]} Partidas, Vencendo ${vitoriasNaSemana[0]} e Perdendo ${derrotasNaSemana[0]}!
+    Na Segunda semana, ele não conseguiu jogar muito, pois estava ocupado, portanto, jogou ${totalPartidasSemana[1]} Partidas, Vencendo ${vitoriasNaSemana[1]} e Perdendo ${derrotasNaSemana[1]}!
+    Na Terceira semana, ${nomeUsuario} estava motivado pra pegar um bom Rank e jogou ${totalPartidasSemana[2]} Partidas, Vencendo ${vitoriasNaSemana[2]} e Perdendo ${derrotasNaSemana[2]}!
+    E por fim, em sua última semana do mês, ele jogou ${totalPartidasSemana[3]} Partidas, Venceu ${vitoriasNaSemana[3]} e Perdeu ${derrotasNaSemana[3]}!
 `)
 
 
